@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class PointControll1 : MonoBehaviour
 {
     //Textオブジェクト
-    private GameObject pointText = null;　
+    private GameObject pointText = null;
 
     //変数の代入
     private int point = 0;
     
+     
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +31,6 @@ public class PointControll1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //pointTextにPointTextを代入
-        this.pointText = GameObject.Find("PointText");
-
-        //Textを取得
-        Text scoreText = pointText.GetComponent<Text>();
-
-        //Textの表示
-        scoreText.text = "score:" + point;
     }
     //衝突時に呼ばれる関数
     void OnCollisionEnter(Collision collision)
@@ -59,6 +52,14 @@ public class PointControll1 : MonoBehaviour
             point += 20;
         }
 
+        //pointTextにPointTextを代入
+        this.pointText = GameObject.Find("PointText");
+
+        //Textを取得
+        Text scoreText = pointText.GetComponent<Text>();
+
+        //Textの表示
+        scoreText.text = "score:" + point;
     }
 
 }

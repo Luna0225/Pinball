@@ -534,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7349587808169742556, guid: 7533ad4cb5b31d143b35252e0df5f1be, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: SmallStarTag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7533ad4cb5b31d143b35252e0df5f1be, type: 3}
@@ -1621,23 +1621,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549189373}
   m_CullTransparentMesh: 1
---- !u!1 &1641273647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 531372470126368255, guid: ac589adb27a884741bddb57f5055b270, type: 3}
-  m_PrefabInstance: {fileID: 837310694361168820}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1641273654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641273647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21d57cfcb69d8a4db9ee87369198fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1665408372
 PrefabInstance:
   m_ObjectHideFlags: 0
