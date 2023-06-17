@@ -7,20 +7,19 @@ public class PointControll1 : MonoBehaviour
 {
     //Textオブジェクト
     private GameObject pointText = null;
-
     //変数の代入
     private int point = 0;
-    
-     
+
+    private Text scoreText;
 
     // Start is called before the first frame update
     void Start()
     {
         //pointTextにPointTextを代入
-        this.pointText = GameObject.Find("PointText");
+        pointText = GameObject.Find("PointText");
         
         //Textを取得
-        Text scoreText = pointText.GetComponent<Text>();
+        scoreText = pointText.GetComponent<Text>();
 
         //Textの表示
         scoreText.text = "score:" + point;
@@ -31,6 +30,7 @@ public class PointControll1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
     //衝突時に呼ばれる関数
     void OnCollisionEnter(Collision collision)
@@ -39,27 +39,25 @@ public class PointControll1 : MonoBehaviour
         {
             point += 40;
         }
-        else if(collision.gameObject.CompareTag("SmallCloudTag"))
+        else if (collision.gameObject.CompareTag("SmallCloudTag"))
         {
             point += 25;
         }
-        else if(collision.gameObject.CompareTag("LargeStarTag"))
+        else if (collision.gameObject.CompareTag("LargeStarTag"))
         {
             point += 40;
         }
-        else if(collision.gameObject.CompareTag("SmallStarTag"))
+        else if (collision.gameObject.CompareTag("SmallStarTag"))
         {
             point += 20;
         }
 
-        //pointTextにPointTextを代入
-        this.pointText = GameObject.Find("PointText");
-
-        //Textを取得
-        Text scoreText = pointText.GetComponent<Text>();
-
-        //Textの表示
+        //Textの表示の更新
         scoreText.text = "score:" + point;
+
+
     }
+
+    
 
 }
